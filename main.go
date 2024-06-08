@@ -25,6 +25,23 @@ func main() {
 	if err := app.Start(); err != nil {
 		log.Fatal(err)
 	}
+
+	// var allowedOrigins []string
+	// var certificateDomains []string
+	// httpAddr := "127.0.0.1:8090"
+	// var httpsAddr string
+	// showStartBanner := false
+
+	// _, err := apis.Serve(app, apis.ServeConfig{
+	// 	HttpAddr:           httpAddr,
+	// 	HttpsAddr:          httpsAddr,
+	// 	ShowStartBanner:    showStartBanner,
+	// 	AllowedOrigins:     allowedOrigins,
+	// 	CertificateDomains: certificateDomains,
+	// })
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 }
 
 func isProd() bool {
