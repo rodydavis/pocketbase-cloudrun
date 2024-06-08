@@ -1,6 +1,6 @@
 # Pocketbase on CloudRun
 
-It is now possible to run Pocketbase on Google Cloud Run because of the recent support for [mounting volumes](https://cloud.google.com/run/docs/configuring/services/cloud-storage-volume-mounts). This is a guide on how to deploy Pocketbase on Google Cloud Run.
+It is now possible to run [Pocketbase](https://pocketbase.io/) on Google [CloudRun](https://cloud.google.com/run?hl=en) because of the recent support for [mounting volumes](https://cloud.google.com/run/docs/configuring/services/cloud-storage-volume-mounts). This is a guide on how to deploy Pocketbase on Google Cloud Run.
 
 > Disclaimer: This is not an official Google project.
 
@@ -8,8 +8,6 @@ It is now possible to run Pocketbase on Google Cloud Run because of the recent s
 
 - Google Cloud project
 - Google Cloud Storage bucket
-- Google Cloud SDK installed on your machine
-- Docker installed on your machine
 
 ## Getting Started
 
@@ -51,13 +49,20 @@ Deploy following the guide on the [official documentation](https://cloud.google.
   - Read-only: `false`
 
 ##### Container(s)
-- Delete any health checks
 - Startup CPU boost is `enabled`
 - Volume mount (s)
   - Volume name: `remote-storage`
   - Mount path: `/cloud/storage`
 
+#### Health Checks
+
+You can add a health check to your service that uses Pocketbase's health check endpoint `/api/health`.
+
+![](/screenshots/health-check.png)
+
 ### Deployed
+
+Now create the service and wait for the cloud build to finish.
 
 If everything goes well, you should see the service deployed.
 
@@ -69,7 +74,7 @@ If everything goes well, you should see the service deployed.
 
 `pb_data`, `pb_public`, and `pb_hooks` are all directories you might use during development.
 
-You can upload these directories to your Google Cloud Storage bucket you created earlier and upload the folders to the root.
+You can upload these directories to your Google Cloud Storage bucket you created earlier to the root directory.
 
 ### Can I use a custom domain?
 
