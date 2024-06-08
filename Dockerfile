@@ -19,6 +19,7 @@ RUN unzip /tmp/pb.zip -d /pb/
 # uncomment to copy the local pb_public dir into the image
 # COPY ./pb_public /cloud/storage/pb_public
 
+ENV PORT 8080
 EXPOSE 8080
 
 # start PocketBase
