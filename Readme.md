@@ -1,4 +1,4 @@
-# Pocketbase on CloudRun
+# PocketBase on CloudRun
 
 It is now possible to run [Pocketbase](https://pocketbase.io/) on Google [CloudRun](https://cloud.google.com/run?hl=en) because of the recent support for [mounting volumes](https://cloud.google.com/run/docs/configuring/services/cloud-storage-volume-mounts). This is a guide on how to deploy Pocketbase on Google Cloud Run.
 
