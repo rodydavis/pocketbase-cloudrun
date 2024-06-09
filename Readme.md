@@ -4,6 +4,13 @@ It is now possible to run [Pocketbase](https://pocketbase.io/) on Google [CloudR
 
 > Disclaimer: This is not an official Google project.
 
+## Features
+
+- Scale to zero
+- Infinite storage (and file deletion protection, file versions, and multi region)
+- `pb_data`/`pb_public`/`pb_hooks` all in the same file system
+- Backups can be done either by PocketBase or by protecting the bucket
+
 ## Prerequisites
 
 - Google Cloud project
