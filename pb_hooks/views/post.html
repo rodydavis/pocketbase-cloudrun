@@ -1,0 +1,12 @@
+{{define "title"}}{{.title}}{{end}}
+
+{{define "body"}}
+<h1>{{.title}}</h1>
+<p>{{.summary}}</p>
+<article>
+{{.content | raw}}
+</article>
+<hr />
+<a href="/posts">View all posts</a>
+{{end}}
+

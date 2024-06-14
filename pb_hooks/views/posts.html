@@ -1,0 +1,13 @@
+{{define "title"}}Posts{{end}}
+
+{{define "body"}}
+<h1>Posts</h1>
+<ul>
+    {{range .posts}}
+    <li>
+        <a href="/posts/{{.id}}">{{.title}}</a>
+    </li>
+    {{end}}
+</ul>
+{{end}}
+
